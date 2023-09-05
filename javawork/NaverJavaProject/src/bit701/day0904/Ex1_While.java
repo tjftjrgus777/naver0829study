@@ -33,6 +33,18 @@ public class Ex1_While {
 		do {
 			System.out.println((char)a++);
 		}while(a<=90);//조건뒤에 반드시; 추가
+		
+		int n=10;
+//		while(n<10)// 조건이 거짓이면 한번도 반복안함
+//		{
+//			System.out.println(n--);
+//		}
+		// do_while은 무조건 일단 한번은 실행
+		do {
+			System.out.println(n--);
+			if(n==0)
+				break;
+		}while(n<10);
 	}
 
 }

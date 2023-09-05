@@ -20,7 +20,7 @@ public class Ex5_Date {
 		
 		System.out.printf("현재 년도 : %d-%2d-%2d\n",year,month,day);
 		System.out.printf("현재 년도 : %d-%02d-%02d\n",year,month,day);
-		System.out.printf("현재 시간 : %02d:%02d:%02d\n",hh,mm,ss);
+		System.out.printf("현재 시간 : %2d:%02d:%02d\n",hh,mm,ss);
 				
 		System.out.println("Calendar 클래스를 이용해서 시간, 날짜 구하기");
 //		Calendar cal = new Calendar(); //오류, 생성자가 public이 아니라 생성안됨

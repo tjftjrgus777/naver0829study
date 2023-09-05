@@ -10,7 +10,7 @@ public class Ex1_Keyinput {
 		//대표적으로 Math클래스의 모든 메서드 static 이다
 		System.out.println("3의 5승: " +Math.pow(3, 5));
 		System.out.println("5,7중 더 큰값은: " +Math.max(5, 7));
-		// new 로 객체를 생성, 이 변수를 인스턴스 변슈라고 한다
+		// new 로 객체를 생성, 이 변수를 인스턴스 변수라고 한다
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("당신의 나이를 입력하세요");
