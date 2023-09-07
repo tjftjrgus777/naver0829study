@@ -29,6 +29,7 @@ public class Ex1_JuminNo {
 			System.out.println("[실행결과]");
 			System.out.println("주민등록 번호 입력 꼭(-)를 사용해주세요");
 		    juminNo = sc.nextLine();
+		    //q or Q입력시 종료
 			if(juminNo.equalsIgnoreCase("q")) {
 				System.out.println("프로그램을 종료합니다");
 				break;

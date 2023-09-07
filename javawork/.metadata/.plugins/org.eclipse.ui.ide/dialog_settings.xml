@@ -10,4 +10,6 @@
 			<item value="org.eclipse.jdt.ui.java"/>
 		</list>
 	</section>
+	<section name="ExternalProjectImportWizard">
+	</section>
 </section>

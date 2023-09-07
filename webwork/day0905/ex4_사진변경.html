@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #photo{
+            position: absolute;
+            left: 30px;
+            top: 100px;
+            width: 300px;
+            height: 500px; 
+        }
+
+        #buttons{
+            position: absolute;
+            left: 30px;
+            top: 10px;
+        }
+        #buttons button{
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+        }
+        #fsize{
+            position: absolute;
+            top: 80px;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--3개의 버튼, 점점작게,점점크게,랜덤
+    점점작게:사진이 5px 씩 줄어든다(50보다 클경우에만 변경)
+    점점크게:사진이 5px 씩 커진다(600px보다 작을경우에만 변경)
+    랜덤:1~20 사이 난수를 구한후 해당 사진으로 변경하기
+    -->
+    <img src="../연예인사진/12.jpg" style="width: 300px;" id="photo">
+    <div id="buttons">
+        <button type="button" id="btnplus">+</button>
+        <button type="button" id="btnminus">-</button>
+        <button type="button" id="btnrandom">?</button>
+    </div>
+    <span id="fsize">현재 사진 너비:</span>
+    <script>
+        let fsize =document.getElementById("fsize");
+        let imgTag =document.getElementById("photo");
+        document.getElementById("btnplus").onclick=function(){
+            let w=parseInt(imgTag.style.width,10);
+            if(w<600){
+                w+=3
+                imgTag.style.width=w+"px";
+                fsize.innerHTML="현재 사진 너비:"+w;
+            }
+        }
+        document.getElementById("btnminus").onclick=function(){
+            let w=parseInt(imgTag.style.width,10);
+            if(w>50){
+                w-=3
+                imgTag.style.width=w+"px";
+                fsize.innerHTML="현재 사진 너비:"+w;
+            }
+        }
+        document.getElementById("btnrandom").onclick=function(){
+            let rnd=parseInt((Math.random()*20))+1;
+            imgTag.setAttribute("src",`../연예인사진/${rnd}.jpg`);
+            console.log(imgTag.src)
+        }
+
+    </script>
+
+</body>
+</html>
