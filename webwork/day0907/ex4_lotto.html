@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 500px;
+            background-color: #ADD8E6;
+        }
+        #time{
+            margin-top: 50px;
+            margin-left: 670px;
+            margin-bottom: 120px;
+        }
+        #box{
+            margin-left: 500px;
+            float: left;
+            border-radius: 100px;
+            padding: 20px;
+            background-color: white;
+            margin-bottom: 50px;
+        }
+        div.box{
+            float: left;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            margin-right: 20px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 60px;
+        }
+        #btn{
+            border: 3px solid black;
+            border-radius: 15px;
+            clear:left;
+            width: 250px;
+            height: 50px;
+            background-color: #7FFFD4;
+            font-size: 23px;
+        }
+        div#box1{
+            background-color: #FFB6C1;
+            color: black;
+            
+        }
+        div#box2{
+            background-color: #FFA500;
+            color: white;
+            
+        }
+        div#box3{
+            background-color: #FFB6C1;
+            color: black;
+            
+        }
+        div#box4{
+            background-color: #B99B69;
+            color: white;
+            
+        }
+        div#box5{
+            background-color: #800080;
+            color: #F7FB02;
+            
+        }
+        div#box6{
+            background-color: #FFB6C1;
+            color: black;
+            
+        }
+        #lotto_box{
+            clear: left;
+            margin-left: 735px;
+            
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            //여러개의 class요소들을 배열변수로 얻는다
+            
+            document.getElementById("btn").onclick=function(){
+            
+        let lotto =new Array(6);
+        let temp;
+        console.log(lotto.length);
+        for(let i=0;i<lotto.length;i++)
+        {
+            lotto[i]=parseInt(Math.random()*45)+1
+            for(let j=0;j<i;j++){
+                if(lotto[i]==lotto[j]){
+                    i--;
+                    break;
+                }
+            }
+        }
+        for(let i=0;i<lotto.length-1;i++)
+        {
+            for(let j=i+1;j<lotto.length+1;j++)
+            {
+                if(lotto[i]>lotto[j]){
+                    temp=lotto[i];
+                    lotto[i]=lotto[j];
+                    lotto[j]=temp;
+                }
+                
+            }
+        }
+        let box=document.querySelectorAll("div.box");
+        for(let i=0;i<box.length;i++){
+            box[i].innerHTML=lotto[i]
+            
+            }
+            let date=new Date();
+            let stime=document.getElementById("stime");
+            console.log(stime)
+                let y=date.getFullYear();
+                let m=date.getMonth()+1;
+                let d=date.getDate();
+                stime.innerHTML=`&nbsp;${y}-${m}-${d}`
+        }   
+        }
+
+    </script>
+</head>
+<body>
+    
+    <div id="time"><b style="color: blue; font-size: 30px">1084</b><b style="font-size: 30px">회</b><span id="stime" style="font-size: 20px; color: gray;"> 2023-09-10</span></div>
+    <div id="box">
+        <div id="box1" class="box" ></div>
+        <div id="box2" class="box" ></div>
+        <div id="box3" class="box" ></div>
+        <div id="box4" class="box" ></div>
+        <div id="box5" class="box" ></div>
+        <div id="box6" class="box" ></div>
+    </div>
+    <br><br>
+    <div id="lotto_box">
+        <button type="button" id="btn" >로또 숫자 구하기</button>
+    </div>
+    
+    
+</body>
+</html>
