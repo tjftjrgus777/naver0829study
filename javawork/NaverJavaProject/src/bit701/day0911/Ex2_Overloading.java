@@ -22,6 +22,10 @@ class Apple{
 	{
 		return a+b;
 	}
+//	public static String sum(String b,int a)
+//	{
+//		return a+b;
+//	}
 	
 	//... Variable Argument
 	public static int sum(int ...n)//n은 배열타입,숫자 갯수 상관없이 int 배열타입으로 받는다
