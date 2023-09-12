@@ -40,4 +40,20 @@ public class Account {
 	{
 		System.out.println(accountNo+"\t"+accountName+"\t"+money);
 	}
+
+
+
+	
+	//getter method
+	public String getAccountName() {
+		return accountName;
+	}
+	
+	public String getAccountNo() {
+		return accountNo;
+	}
+	
+	public int getMoney() {
+		return money;
+	}
 }
