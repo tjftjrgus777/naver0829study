@@ -38,7 +38,7 @@
             s.style.backgroundColor="yellow"
         }
 
-        //in 은 index만 얻는다
+        // in 은 index만 얻는다
         // for(let idx in tag1){
         //     tag1[idx].style.border="2px solid magenta";
         // }
@@ -78,46 +78,76 @@
         //3번 문제: 사진에 마우스를 올리면 border-radius를 100px 로 변경하고
         // 다시 벗어나면 0으로 하기
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-        let photo_array=document.querySelectorAll("div.food_photo>div>img.photo")
-        for(let photo of photo_array){
-            photo.style.width="200px";
+        let p_array=document.querySelectorAll(".photo")
+        for(let i=0;i<p_array.length;i++)
+        {
+            p_array[i].style.width="200px"
         }
-
-        let title=document.querySelector("div.food_photo>div>b.title");
-        title.style.color="red";
-        title.style.backgroundColor="gray";
-
-        for(let photo of photo_array){
-            let prev_phot
+        for(let photo of p_array){
+            console.log(photo)
+            photo.style.width="200px"
+        }
+        
+        
+        let b_title=document.querySelector(".title")
+        console.log(b_title)
+        b_title.style.color="red";
+        b_title.style.backgroundColor="gray"
+        
+        for(let photo of p_array)
+        {
+            let prev_phot=photo.getAttribute("src")
             photo.onmouseover=function(){
-                //this.style.borderRadius="100px"
+                photo.style.borderRadius="100px"
+                
+                photo.setAttribute("src","../이쁜동물이미지/c1.png")
 
-                //변경전 현재 사진을 저장해준다
-                prev_phot=this.getAttribute("src");
-                //동물 사진으로 변경
-                this.setAttribute("src","../이쁜동물이미지/c1.png")
             }
 
             photo.onmouseout=function(){
-                //this.style.borderRadius="0px"
-                this.setAttribute("src",prev_phot);
-                
+                photo.style.borderRadius="0px"
+                photo.setAttribute("src",prev_phot)
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let photo_array=document.querySelectorAll("div.food_photo>div>img.photo")
+        // for(let photo of photo_array){
+        //     photo.style.width="200px";
+        // }
+
+        // let title=document.querySelector("div.food_photo>div>b.title");
+        // title.style.color="red";
+        // title.style.backgroundColor="gray";
+
+        // for(let photo of photo_array){
+        //     let prev_phot
+        //     photo.onmouseover=function(){
+        //         //this.style.borderRadius="100px"
+
+        //         //변경전 현재 사진을 저장해준다
+        //         prev_phot=this.getAttribute("src");
+        //         //동물 사진으로 변경
+        //         this.setAttribute("src","../이쁜동물이미지/c1.png")
+        //     }
+
+        //     photo.onmouseout=function(){
+        //         //this.style.borderRadius="0px"
+        //         this.setAttribute("src",prev_phot);
+                
+        //     }
+        //}
     </script>
 </body>
 </html>

@@ -6,14 +6,21 @@ class SuperB
 	{
 		System.out.println("부모가 가진 메서드 A");
 	}
+	
+	
+	public void processD()
+	{
+		System.out.println("부모가 가진 메서드 A");
+	}
 }
 
 class SubB extends SuperB
 {
+	
 	@Override //어노테이션
 	public void processA() {
 		// TODO Auto-generated method stub
-		super.processA();//부모가 먼저 작업을 하고
+//		super.processA();//부모가 먼저 작업을 하고
 		System.out.println("자식이 가진 오버라이드메서드 A");//나머지는 자식 클래스에서 작업을 완성을 하겠다
 	}
 	

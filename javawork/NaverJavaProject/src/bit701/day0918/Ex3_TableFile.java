@@ -36,7 +36,6 @@ public class Ex3_TableFile extends JFrame{
 		//디자인이나 이벤트를구현할 메서드 호출
 		this.setDeSign();
 		this.setVisible(true);//true:프레임을 보이게하기,false:프레임숨기기
-		
 		//윈도우 이벤트 발생-익명내부클래스 형태로 이벤트 구현
 		this.addWindowListener(new WindowAdapter() {
 			@Override
@@ -96,6 +95,7 @@ public class Ex3_TableFile extends JFrame{
 		//table 생성
 		model=new DefaultTableModel(new String[] {"이름","나이","주소"},0);//행갯수는 일단0개로 설정
 		table=new JTable(model);
+		System.out.println(this);
 		this.add("Center",new JScrollPane(table));
 		
 		//버튼 이벤트

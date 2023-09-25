@@ -25,7 +25,7 @@ class SubA extends SuperA
 		this.processA();
 		this.processB();
 		//부모의 주소값을 가진 인스턴스 변수 super
-		//반드시 super 로만 부모 메서드를 가져와야 하는경우는
+		//오버라이드한 부모 메서드를 가져와야 하는경우는 super를 변수를 사용해야한다
 		//  부모의 메서드를 자식이 오버라이드한경우
 		super.processA();//부모의 메서드이므로 super로도 가져올수 있다
 		super.processB();

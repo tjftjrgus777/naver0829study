@@ -40,7 +40,7 @@ class SubD extends SuperD
 	{
 		super(carName,carColor);
 		System.out.println("sub의 두번쨰 생성자");
-		this.carPrice=4000;
+		this.carPrice=carPrice;
 	}
 	@Override
 	public void carInfo() {
