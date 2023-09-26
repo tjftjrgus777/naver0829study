@@ -17,6 +17,7 @@ public class Ex3_SwinGIbon extends JFrame implements ActionListener{
 		// TODO Auto-generated method stub
 		if(e.getSource()==btn1) {
 			System.out.println("버튼 1클릭");
+			System.out.println(this);
 			this.getContentPane().setBackground(Color.red);
 		}else {
 			System.out.println("버튼 2클릭");

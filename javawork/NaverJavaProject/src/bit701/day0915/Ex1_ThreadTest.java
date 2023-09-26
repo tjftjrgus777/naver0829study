@@ -7,8 +7,6 @@ public class Ex1_ThreadTest extends Thread{
 	String name;
 	int count;
 	
-	
-
 	public Ex1_ThreadTest(String name, int count) {
 		super();
 		this.name = name;
@@ -23,7 +21,6 @@ public class Ex1_ThreadTest extends Thread{
 		}
 	}
 
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Ex1_ThreadTest th1=new Ex1_ThreadTest("one_thread", 300);
@@ -35,5 +32,4 @@ public class Ex1_ThreadTest extends Thread{
 		th2.start();
 		th3.start();
 	}
-
 }
